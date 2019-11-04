@@ -1,0 +1,74 @@
+*{
+   
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: #333;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.card-container{
+    perspective: 1200px;
+    height: 450px;
+    width: 450px;
+}
+.card {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.2s ease-in-out;
+    transform-style: preserve-3d ;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front img{
+    height: 450px;
+    width: 450px;
+}
+.front, .back{
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back{
+    height: 100%;
+    width: 100%;
+    color: #2c3e50;
+    background: cornsilk;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+.back-content{
+    margin: 150px 0 ;
+}
+.sym{
+    margin: 50px 0;
+}
+.sym a{
+    color: #2c3e50;
+    display:inline-flex;
+    width: 75px;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    border-radius: 50%;
+}
+.sym a:hover{
+    background-color: #2c3e50;
+    color: cornsilk;
+    transition: 0.3s;
+}
